@@ -16,6 +16,29 @@ const PHONE = "+1 (224) 448-4735";
 const PHONE_HREF = "tel:+12244484735";
 const EMAIL = "bslulife@outlook.com";
 
+const CARRIER_LOGOS = [
+  { name: "AIG", href: "https://www.aig.com", logo: "/aig.png" },
+  {
+    name: "American Amicable",
+    href: "https://www.americanamicable.com",
+    logo: "/americanamicablegroup.png",
+  },
+  { name: "Americo", href: "https://www.americo.com", logo: "/americo.png" },
+  { name: "Banner Life", href: "https://www.bannerlife.com", logo: "/bannerlife.png" },
+  { name: "Fidelity & Guaranty Life", href: "https://www.fglife.com", logo: "/F&G.png" },
+  {
+    name: "Mutual of Omaha",
+    href: "https://www.mutualofomaha.com",
+    logo: "/mutual-of-omaha.png",
+  },
+  { name: "SBLI", href: "https://www.sbli.com", logo: "/SBLI.png" },
+  {
+    name: "United Home Life",
+    href: "https://www.unitedhomelife.com",
+    logo: encodeURI("/New Folder With Items/UHL-logo.png"),
+  },
+] as const;
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -88,16 +111,26 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Hero image strip */}
+        {/* Carrier logo rail */}
         <div className="container relative pb-16">
-          <div className="rounded-2xl overflow-hidden shadow-elegant border border-primary-foreground/10">
-            <img
-              src={heroImage}
-              alt="A multigenerational family laughing together at home"
-              width={1280}
-              height={1600}
-              className="w-full h-[280px] sm:h-[360px] object-cover object-center"
-            />
+          <p className="text-center text-xs uppercase tracking-widest text-primary-foreground/50 mb-5">
+            Carriers we work with
+          </p>
+          <div className="flex w-full flex-wrap items-center justify-center gap-x-5 gap-y-6 py-2 sm:gap-x-7 md:flex-nowrap md:justify-between md:gap-3 lg:gap-5">
+            {CARRIER_LOGOS.map(({ name, logo }) => (
+              <div
+                key={name}
+                className="flex h-12 shrink-0 items-center justify-center md:h-11 lg:h-12"
+              >
+                <img
+                  src={logo}
+                  alt={name}
+                  width={160}
+                  height={64}
+                  className="max-h-8 w-auto max-w-[104px] object-contain opacity-90 sm:max-h-9 sm:max-w-[118px] md:max-h-7 md:max-w-[92px] lg:max-h-8 lg:max-w-[108px] xl:max-w-[118px]"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
