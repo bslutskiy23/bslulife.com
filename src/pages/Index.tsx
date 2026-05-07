@@ -35,7 +35,7 @@ const CARRIER_LOGOS = [
   {
     name: "United Home Life",
     href: "https://www.unitedhomelife.com",
-    logo: encodeURI("/New Folder With Items/UHL-logo.png"),
+    logo: "/united-home-life.png",
   },
 ] as const;
 
