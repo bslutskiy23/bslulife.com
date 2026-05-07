@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&family=Epilogue:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Navy Trust palette */
+    --background: 36 33% 97%;
+    --foreground: 222 60% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 60% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 60% 12%;
+
+    --primary: 222 64% 15%;
+    --primary-foreground: 215 33% 95%;
+
+    --secondary: 215 33% 95%;
+    --secondary-foreground: 222 64% 15%;
+
+    --muted: 215 25% 92%;
+    --muted-foreground: 215 16% 40%;
+
+    --accent: 211 47% 43%;
+    --accent-foreground: 215 33% 98%;
+
+    --gold: 41 55% 55%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 25% 88%;
+    --input: 215 25% 88%;
+    --ring: 211 47% 43%;
+
+    --radius: 0.75rem;
+
+    --gradient-hero: linear-gradient(135deg, hsl(222 64% 15%) 0%, hsl(216 55% 22%) 60%, hsl(211 47% 32%) 100%);
+    --gradient-soft: linear-gradient(180deg, hsl(36 33% 97%) 0%, hsl(215 33% 95%) 100%);
+    --shadow-elegant: 0 20px 60px -20px hsl(222 64% 15% / 0.25);
+    --shadow-card: 0 4px 24px -8px hsl(222 64% 15% / 0.12);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  h1, h2, h3, h4, h5 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer utilities {
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+  .bg-soft-gradient {
+    background: var(--gradient-soft);
+  }
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  .shadow-card-soft {
+    box-shadow: var(--shadow-card);
+  }
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}
