@@ -45,15 +45,12 @@ const Index = () => {
       {/* Nav */}
       <header className="absolute top-0 inset-x-0 z-20">
         <div className="container flex items-center justify-between py-5">
-          <a href="#top" className="flex items-center gap-2 text-primary-foreground">
+          <a href="#top" className="flex items-center gap-3 text-primary-foreground">
             <div className="h-9 w-9 rounded-lg bg-gold flex items-center justify-center">
               <ShieldCheck className="h-5 w-5 text-primary" />
             </div>
             <div className="leading-tight">
-              <div className="font-display font-bold text-lg">BSLU Life</div>
-              <div className="text-[10px] uppercase tracking-widest text-primary-foreground/70">
-                Through Symmetry Financial
-              </div>
+              <div className="font-display font-bold text-xl">BSLU Life</div>
             </div>
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm text-primary-foreground/80">
@@ -337,9 +334,6 @@ const Index = () => {
               </div>
               <div className="leading-tight">
                 <div className="font-display font-bold text-lg">BSLU Life</div>
-                <div className="text-[10px] uppercase tracking-widest text-primary-foreground/60">
-                  Through Symmetry Financial
-                </div>
               </div>
             </div>
             <p className="text-sm mt-4 max-w-xs">
