@@ -190,9 +190,9 @@ export const QuoteForm = () => {
         </div>
 
         <div className="space-y-1.5">
-          <Label>Coverage type</Label>
+          <Label htmlFor="coverageType">Coverage type</Label>
           <Select value={fields.coverageType} onValueChange={(v) => update("coverageType", v)}>
-            <SelectTrigger>
+            <SelectTrigger id="coverageType">
               <SelectValue placeholder="Select coverage" />
             </SelectTrigger>
             <SelectContent>
@@ -212,12 +212,12 @@ export const QuoteForm = () => {
         </div>
 
         <div className="space-y-1.5">
-          <Label>Coverage amount</Label>
+          <Label htmlFor="coverageAmount">Coverage amount</Label>
           <Select
             value={fields.coverageAmount}
             onValueChange={(v) => update("coverageAmount", v)}
           >
-            <SelectTrigger>
+            <SelectTrigger id="coverageAmount">
               <SelectValue placeholder="Select amount" />
             </SelectTrigger>
             <SelectContent>
