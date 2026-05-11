@@ -79,7 +79,7 @@ export const QuoteForm = () => {
         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-accent/10 text-accent">
           <ShieldCheck className="h-7 w-7" />
         </div>
-        <h3 className="text-2xl font-display font-semibold">You're all set, {fields.name.split(" ")[0]}.</h3>
+        <h3 className="text-2xl font-display font-semibold text-foreground">You're all set, {fields.name.split(" ")[0]}.</h3>
         <p className="text-muted-foreground">
           A licensed agent will reach out within one business day at{" "}
           <span className="text-foreground font-medium">{fields.phone}</span>.
